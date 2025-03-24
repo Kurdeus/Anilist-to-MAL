@@ -9,10 +9,13 @@ import os
 import platform
 import subprocess
 from typing import Dict, Optional, Any, List
+from PyQt6.QtGui import QIcon
 from PyQt6.QtWidgets import (QApplication, QMainWindow, QPushButton, QLabel, 
                             QVBoxLayout, QHBoxLayout, QWidget, QComboBox, 
                             QMessageBox, QProgressBar, QLineEdit)
 from PyQt6.QtCore import Qt, QThread, pyqtSignal, QMutex
+
+
 
 # Configuration
 class Config:
@@ -451,7 +454,7 @@ class ExportWorker(QThread):
 class AnilistToMALApp(QMainWindow):
     def __init__(self):
         super().__init__()
-        
+
         self.config = Config()
         self.anilist_service = AnilistService(self.config, self)
         self.worker = None
@@ -460,7 +463,7 @@ class AnilistToMALApp(QMainWindow):
     def init_ui(self):
         self.setWindowTitle('Anilist to MAL Exporter')
         self.setGeometry(300, 300, 500, 300)
-        
+        self.setWindowIcon(QIcon('app.ico'))
         # Main widget and layout
         main_widget = QWidget()
         main_layout = QVBoxLayout()
