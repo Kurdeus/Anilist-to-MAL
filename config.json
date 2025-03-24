@@ -1,0 +1,6 @@
+{
+    "username": "Shahabadin",
+    "aniclient": "12345",
+    "anisecret": "abcdef-STUVWXYZ",
+    "redirectUrl": "http://127.0.0.1:8000/callback"
+}

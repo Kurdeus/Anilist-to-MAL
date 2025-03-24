@@ -1,0 +1,13 @@
+desktop.ini
+.idea/
+.vscode/
+build/
+dist/
+__pycache__/
+Thumbs.db
+venv/
+venv-activate.cmd
+venv-deactivate.cmd
+Symbols/
+node_modules/
+.mypy_cache/
